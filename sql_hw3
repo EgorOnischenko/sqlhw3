@@ -48,6 +48,10 @@ create table if not exists playlist(
 id serial primary key,
 name varchar (200) not null,
 release_date text,
+
+
+create table if not exists playlist_song(
 song_id integer references song(id)
+playlist_id integer references playlist(id)
 
 );
